@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="Album_style.css">
+    <link rel="stylesheet" href="colorbox.css">
+    <script src="jquery-1.11.2.js"></script>
+    <script src="jquery.colorbox.js"></script>
+    <title>Album</title>
+</head>
+<body>
+<main class="container">
+    <header class="container">
+        <h1>
+            Album
+        </h1>
+    </header>
+    <nav class="container">
+        <ul id="nav">
+            <li><a href="Index.html">HOME<span class="link"></span></a></li>
+            <li>
+                <a href="#">ABOUT ME ▾<span class="link"></span></a>
+                <ul>
+                    <li><a href="Contact%20_and_CV.html">CV<span class="link"></span></a></li>
+                    <li><a href="Background.html">Background<span class="link"></span></a></li>
+                    <li><a href="Hobbies.html">Hobbies<span class="link"></span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="Gallery.html">GALLERY ▾<span class="link"></span></a>
+                <ul>
+                    <li><a href="HTML_Section.html">HTML/CSS<span class="link"></span></a></li>
+                    <li><a href="http://d.angelov.uchenici.bg/">PHP<span class="link"></span></a></li>
+                </ul>
+            </li>
+            <li><a href="Contact%20_and_CV.html">CONTACTS<span class="link"></span></a></li>
+        </ul>
+    </nav>
+    <article class="container">
+        <h2>Everybody has a Hobby!</h2>
+        <section>
+            <a id="openGallery" class="btn btn-info btn-lg" href="#">View Album</a>
+            <ul class="gallery-ul">
+                <li><a href="images/Jack1b.JPG" class="pic-1 slideshow"><img src="images/thumbs/Jack1.JPG" alt="Pictures of Jack"/></a></li>
+                <li><a href="images/Jack2b.JPG" class="pic-2 slideshow"><img src="images/thumbs/Jack2.JPG" alt="Pictures of Jack"/></a></li>
+                <li><a href="images/Jack3b.JPG" class="pic-3 slideshow"><img src="images/thumbs/Jack3.JPG" alt="Pictures of Jack"/></a></li>
+                <li><a href="images/Jack4b.JPG" class="pic-4 slideshow"><img src="images/thumbs/Jacj4.JPG" alt="Pictures of Jack"/></a></li>
+                <li><a href="images/Jack5b.JPG" class="pic-5 slideshow"><img src="images/thumbs/Jack5.JPG" alt="Pictures of Jack"/></a></li>
+                <li><a href="images/Jack6b.JPG" class="pic-6 slideshow"><img src="images/thumbs/Jack6.JPG" alt="Pictures of Jack"/></a></li>
+                <li><a href="images/Jack7b.JPG" class="pic-7 slideshow"><img src="images/thumbs/Jack7.JPG" alt="Pictures of Jack"/></a></li>
+                <li><a href="images/Jack8b.JPG" class="pic-8 slideshow"><img src="images/thumbs/Jack8.JPG" alt="Pictures of Jack"/></a></li>
+                <li><a href="images/Jack9b.JPG" class="pic-9 slideshow"><img src="images/thumbs/Jack9.JPG" alt="Pictures of Jack"/></a></li>
+                <li><a href="images/Jack10b.JPG" class="pic-10 slideshow"><img src="images/thumbs/Jack10.JPG" alt="Pictures of Jack"/></a></li>
+            </ul>
+            <script>
+                jQuery('a.slideshow').colorbox({slideshow:true});
+            </script>
+            <div style="display: none;">
+                <a rel="gallery" href="images/Jack1b.JPG">test 1</a>
+                <a rel="gallery" href="images/Jack2b.JPG">test 2</a>
+                <a rel="gallery" href="images/Jack3b.JPG">test 3</a>
+                <a rel="gallery" href="images/Jack4b.JPG">test 4</a>
+                <a rel="gallery" href="images/Jack5b.JPG">test 5</a>
+                <a rel="gallery" href="images/Jack6b.JPG">test 6</a>
+                <a rel="gallery" href="images/Jack7b.JPG">test 7</a>
+                <a rel="gallery" href="images/Jack8b.JPG">test 8</a>
+                <a rel="gallery" href="images/Jack9b.JPG">test 9</a>
+                <a rel="gallery" href="images/Jack10b.JPG">test 10</a>
+            </div>
+            <script>
+                var $gallery = $("a[rel=gallery]").colorbox();
+                $("a#openGallery").click(function(e){
+                    e.preventDefault();
+                    $gallery.eq(0).click();
+                });
+            </script>
+        </section>
+    </article>
+    <footer class="container">
+        <div>
+            <p>
+                The Website is still work in progress. The plan is to
+                have at least 4 major resolution break-points, optimized
+                for: Chrome, Firefox and IE 10 (I hope).
+            </p>
+        </div>
+        <span>
+            Last update 07.04.2015
+        </span>
+    </footer>
+</main>
+</body>
+</html>

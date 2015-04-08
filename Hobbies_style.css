@@ -1,0 +1,350 @@
+*{
+    margin: 0; padding: 0;
+}
+
+@font-face {
+    font-family: Days One;
+    src: url(fonts/DaysOne-Regular.ttf);
+}
+
+#accordian {
+    background-color: rgba(0,89,142,0.7);
+    width: 100%;
+    padding-bottom: 15px;
+    color: #ffffff;
+}
+
+#accordian h3 {
+    font-size: 20px;
+    font-family: "Days One" , sans-serif;
+    text-align: center;
+    color: #ffa71e;
+    line-height: 34px;
+    padding: 0 10px;
+    cursor: pointer;
+    /*fallback for browsers not supporting gradients*/
+    background: #003040;
+    background: linear-gradient(#0d3798, #251d8a);
+}
+/*heading hover effect*/
+#accordian h3:hover {
+    text-shadow: 0 0 20px rgba(255, 23, 25, 0.70);
+}
+
+
+#accordian li {
+    list-style-type: none;
+}
+
+#accordian ul ul li a {
+    color: #ff972d;
+    font-weight: bold;
+}
+
+#accordian ul ul {
+    display: none;
+}
+
+.accordian-content{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.accordian-content:hover{
+    cursor: default;
+}
+
+.accordian-content > span{
+    display: block;
+    margin-top: 25px;
+    text-align: justify;
+}
+
+.accordian-content > span:first-of-type{
+    font-style: italic;
+    font-size: 14px;
+}
+
+.author{
+    font-family: "Days One" , sans-serif;
+    font-size: 18px;
+}
+
+#accordian ul ul li a.btn-warning{
+    color: #000;
+}
+/*accordian end here*/
+
+body{
+    background-image: url(images/bodybg1.2.jpg);
+}
+
+header{
+    height: 165px;
+    margin-top: 5px;
+    border-left: 5px solid #7416c7;
+    border-right: 5px solid #7416c7;
+    background-image:
+    url(images/header.png),
+    url(images/header-close.png);
+    background-repeat: no-repeat;
+    background-position:
+    top left 10px,
+    bottom left 10px;
+    border-radius: 25px;
+}
+
+header > h1{
+    margin-top: 50px;
+    color: #ae24fe;
+    font-family: "Days One" ,sans-serif;
+    text-align: center;
+}
+
+header > h1:hover{
+    cursor: default;
+}
+
+nav{
+    margin-top: 15px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    border-left:5px solid #ffffff;
+    border-right:5px solid #ffffff;
+    border-radius: 25px;
+    font-family: sans-serif;
+    font-weight: 400;
+    background-image:
+    url(images/nav.png),
+    url(images/body%20-%20Copy%20-%20Copy.png);
+    background-repeat: no-repeat;
+    background-position:
+    top left 10px,
+    bottom left 10px;
+}
+
+nav ul{
+    list-style: none;
+    background: linear-gradient(#F6F6F6 , #878787);
+    height: 40px;
+}
+
+nav ul li{
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+    margin-left: -5px;
+    height: 40px;
+    border-right: 2px solid #000000;
+    border-left: 2px solid #000000;
+    width: 120px;
+    font-weight: 600;
+    text-align: center;
+}
+
+nav ul li a{
+    color: #000000;
+    text-decoration: none !important;
+}
+
+li a:hover{
+    color: #000;
+}
+
+.link{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+}
+
+nav > ul > li:nth-of-type(1){
+    margin-left: 0;
+}
+
+nav > ul > li:nth-of-type(2){
+    background-color: #ffffff;
+}
+
+nav ul > li:hover{
+    background-color: #ffffff;
+    border-right: 2px solid #000000;
+    border-left: 2px solid #000000;
+}
+
+/*drop down */
+
+nav ul > li:hover >ul{
+    display: block;
+    margin-left: -2px;
+}
+
+nav ul > li > ul{
+    position: absolute;
+    display: none;
+    margin-top: 10px;
+}
+
+nav ul >li > ul >li:first-of-type{
+    border-top: 2px solid #000000;
+}
+
+nav ul > li > ul >li{
+    display: block;
+    height: 40px;
+    margin-left: 0;
+    padding-top: 10px;
+    padding-left: 0;
+    border-bottom: 2px solid #000;
+}
+
+nav li li {
+    display: block;
+    text-align: center;
+    background-color: #fff;
+}
+
+nav li li:hover{
+    background: linear-gradient(#F6F6F6 , #878787);
+}
+
+article.container{
+    margin-top: 15px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    border-left: 5px solid #4895f8;
+    border-right: 5px solid #f8c139;
+    border-radius: 25px;
+    background-image: url(images/article.png),
+    url(images/article-close.png);
+    background-repeat: no-repeat;
+    background-position: top left 10px,
+    bottom left 10px;
+}
+
+article.container > h2{
+    padding-left: 15px;
+    font-family: "Days One" , sans-serif;
+    font-size: 36px;
+    color: #94caff;
+}
+
+article.container > section  p{
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: justify;
+    text-indent: 15px;
+}
+
+article.container > section > span{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 20px;
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+article.container > section > span > a{
+    color: #2524ff;
+}
+
+article.container > section{
+
+    padding: 15px;
+   /* background-color: rgba(38, 165, 255, 0.70); */
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+footer.container{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    border-left: 5px solid #232bab;
+    border-right: 5px solid #232bab;
+    border-radius: 25px;
+    background-image:
+    url(images/footer.png),
+    url(images/footer-close.png);
+    background-repeat: no-repeat;
+    background-position:
+    top left 10px,
+    bottom left 10px;
+}
+
+footer.container:hover{
+    cursor: default;
+}
+
+footer.container div{
+    width: 500px;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(44, 69, 255, 0.2);
+}
+
+footer.container > span{
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+/* Gallery */
+
+@media screen and (max-width: 640px){
+
+    nav{
+        width: 405px;
+    }
+
+    nav ul{
+        list-style: none;
+        background: linear-gradient(#F6F6F6 , #878787);
+        height: 30px;
+    }
+
+    nav ul li{
+        position: relative;
+        display: inline-block;
+        padding-top: 7px;
+        margin-left: -5px;
+        height: 30px;
+        border-right: 2px solid #000000;
+        border-left: 2px solid #000000;
+        width: 92px;
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /*drop down */
+
+    nav ul > li >ul{
+        position: absolute;
+        display: none;
+        margin-top: 6px;
+    }
+
+
+    nav ul > li > ul >li{
+        display: block;
+        height: 30px;
+        margin-left: 0;
+        padding-top: 7px;
+        padding-left: 0;
+        border-bottom: 2px solid #000;
+    }
+
+    footer.container div{
+        width: 100%;
+    }
+}
