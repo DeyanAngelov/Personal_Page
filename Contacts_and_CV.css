@@ -206,6 +206,15 @@ article.container:hover{
     font-weight: bold;
 }
 
+#e-mail:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+ article section span a.btn-warning{
+    color: #000000;
+}
+
 a.btn-success{
     padding-left: 0;
     font-weight: 600;
