@@ -17,43 +17,85 @@ header{
     margin-top: 5px;
     border-left: 5px solid #7416c7;
     border-right: 5px solid #7416c7;
-    background-image:
+   /* background-image:
     url(images/header.png),
     url(images/header-close.png);
     background-repeat: no-repeat;
     background-position:
     top left 10px,
-    bottom left 10px;
+    bottom left 10px;*/
     border-radius: 25px;
+    transition:
+    border-left-color 0.7s ease-in-out 0.6s,
+    border-right-color 0.7s ease-in-out 0.6s;
+}
+
+header:hover{
+    cursor: default;
+    border-left-color: #ffa500;
+    border-right-color: #ffa500;
 }
 
 header > h1{
-    margin-top: 50px;
     color: #ae24fe;
     font-family: "Days One" ,sans-serif;
     text-align: center;
+    transition:
+    color 0.7s ease-in-out 0.6s;
+}
+header:hover > h1{
+    color: #ffa500;
 }
 
-header > h1:hover{
-    cursor: default;
+.transition-header{
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #ae24fe;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.6s,
+    color 0.7s ease-in-out 0.6s;
+}
+
+header:hover > .transition-header{
+    opacity: 1;
+    color: orange;
 }
 
 nav{
     margin-top: 15px;
-    padding-top: 50px;
-    padding-bottom: 40px;
+    height: 105px;
     border-left:5px solid #ffffff;
     border-right:5px solid #ffffff;
     border-radius: 25px;
     font-family: sans-serif;
     font-weight: 400;
-    background-image:
-    url(images/nav.png),
-    url(images/body%20-%20Copy%20-%20Copy.png);
-    background-repeat: no-repeat;
-    background-position:
-    top left 10px,
-    bottom left 10px;
+    /* background-image:
+     url(images/nav.png),
+     url(images/body%20-%20Copy%20-%20Copy.png);
+     background-repeat: no-repeat;
+     background-position:
+     top left 10px,
+     bottom left 10px;*/
+}
+
+.transition-nav{
+    margin-top: -12px;
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #f3eefe;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.6s;
+}
+
+nav:hover > .transition-nav{
+    cursor: default;
+    opacity: 1;
 }
 
 nav ul{
@@ -94,10 +136,6 @@ li a:hover{
 
 nav > ul > li:nth-of-type(1){
     margin-left: 0;
-}
-
-nav > ul > li:nth-of-type(2){
-    background-color: #ffffff;
 }
 
 nav > ul > li:nth-of-type(4){
@@ -147,24 +185,49 @@ li li:hover{
 }
 
 article.container{
+    height: 100%;
     margin-top: 15px;
-    padding-top: 50px;
-    padding-bottom: 70px;
     border-left: 5px solid #4895f8;
-    border-right: 5px solid #f89946;
+    border-right: 5px solid #4895f8;
     border-radius: 25px;
-    background-image: url(images/article.png),
+    /*background-image:
+    url(images/article.png),
     url(images/article-close.png);
     background-repeat: no-repeat;
     background-position: top left 10px,
-    bottom left 10px;
+    bottom left 10px;*/
+}
+
+article.container:hover{
+    cursor: default;
 }
 
 article.container > h2{
+    margin-top: -35px;
     padding-left: 15px;
     font-family: "Days One" , sans-serif;
     font-size: 36px;
     color: #94caff;
+    transition: margin-top 0.7s ease-in-out 0.7s;
+}
+
+article.container:hover > h2{
+    margin-top: 20px;
+}
+
+.transition-article{
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #4895f8;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.7s;
+}
+
+article.container:hover > .transition-article{
+    opacity: 1;
 }
 
 article.container > section  p{
@@ -193,7 +256,7 @@ article.container > section > span > a{
 
 article.container > section{
     padding: 15px;
-    background-color: rgba(0,89,142,0.7);
+    background-color: rgba(44, 69, 255, 0.2);
     border-radius: 15px;
 }
 
@@ -201,12 +264,12 @@ article.container:hover{
     cursor: default;
 }
 
-#e-mail{
+span.e-mail{
     color: orange;
     font-weight: bold;
 }
 
-#e-mail:hover{
+span.e-mail:hover{
     text-decoration: underline;
     cursor: pointer;
 }
@@ -221,38 +284,68 @@ a.btn-success{
 }
 
 footer.container{
-    margin-top: 110px;
+    margin-top: 15px;
     margin-bottom: 15px;
+    height: 100px;
     color: #ffffff;
     border-left: 5px solid #232bab;
-    border-right: 5px solid #ff7744;
+    border-right: 5px solid #232bab;
     border-radius: 25px;
-    background-image:
-    url(images/footer.png),
-    url(images/footer-close.png);
-    background-repeat: no-repeat;
-    background-position:
-    top left 10px,
-    bottom left 10px;
+    /* background-image:
+     url(images/footer.png),
+     url(images/footer-close.png);
+     background-repeat: no-repeat;
+     background-position:
+     top left 10px,
+     bottom left 10px;*/
+    transition: height 0.7s ease-in-out 0.6s,
+    border-left-color 0.7s ease-in-out 0.7s,
+    border-right-color 0.7s ease-in-out 0.7s;
 }
 
 footer.container:hover{
     cursor: default;
+    height: 170px;
+    border-left-color: #7416c7;
+    border-right-color: #7416c7;
 }
 
-footer.container div{
+.transition-footer{
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #4895f8;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.7s,
+    color 0.7s ease-in-out 0.7s;
+}
+
+footer.container:hover > .transition-footer{
+    opacity: 1;
+    color: #7416c7;
+}
+
+footer.container section{
+    margin-top: -35px;
     width: 500px;
-    margin-top: 50px;
     padding: 15px;
     border-radius: 15px;
     background-color: rgba(44, 69, 255, 0.2);
+    transition: margin-top 0.7s ease-in-out 0.7s,
+    background-color 0.7s ease-in-out 0.6s;
+}
+
+footer.container:hover > section{
+    margin-top: 5px;
+    background-color: rgba(116, 22, 199, 0.2);
 }
 
 footer.container > span{
     display: inline-block;
     float: right;
-    margin-top: 10px;
-    padding-bottom: 30px;
+    margin-top: -25px;
 }
 
 @media screen and (max-width: 640px){
@@ -299,7 +392,7 @@ footer.container > span{
         border-bottom: 2px solid #000;
     }
 
-    footer.container div{
+    footer.container section{
         width: 100%;
     }
 }

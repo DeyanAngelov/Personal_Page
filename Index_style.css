@@ -14,57 +14,107 @@ body{
 
 header{
     width: 1170px;
-    height: 165px;
+    height: 125px;
     margin-top: 5px;
     border-left: 5px solid #7416c7;
     border-right: 5px solid #7416c7;
-    background-image:
+    border-radius: 25px;
+    /*background-image:
     url(images/header.png),
-    url(images/title.png),
-    url(images/title-close.png),
     url(images/header-close.png);
     background-repeat: no-repeat;
     background-position:
     top left 10px,
-    top 70px left 120px,
-    top 70px left 940px,
-    bottom left 10px;
-    border-radius: 25px;
+    bottom left 10px;*/
+    transition:
+    height 0.7s ease-in-out 0.6s,
+    border-left-color 0.7s ease-in-out 0.6s,
+    border-right-color 0.7s ease-in-out 0.6s;
+}
+
+header > h1{
+    margin-top: -20px;
+    color: #ae24fe;
+    font-family: "Days One" ,sans-serif;
+    text-align: center;
+    transition:
+    margin-top 0.7s ease-in-out 0.6s,
+    color 0.7s ease-in-out 0.6s;
+}
+
+/* header transitions */
+
+.transition-header{
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #ae24fe;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.6s,
+    color 0.7s ease-in-out 0.6s;
 }
 
 header:hover{
     cursor: default;
+    height: 175px;
+    border-left-color: #ffa500;
+    border-right-color: #ffa500;
 }
 
-header > h1{
-    margin-top: 50px;
-    color: #ae24fe;
-    font-family: "Days One" ,sans-serif;
-    text-align: center;
+header:hover > h1{
+    margin-top: 0;
+    color: #ffa500;
 }
+
+header:hover > .transition-header{
+    opacity: 1;
+    color: orange;
+}
+/* End of header transitions */
 
 nav{
+    height: 105px;
     margin-top: 15px;
-    padding-top: 50px;
-    padding-bottom: 40px;
     border-left:5px solid #ffffff;
     border-right:5px solid #ffffff;
     border-radius: 25px;
     font-family: sans-serif;
     font-weight: 400;
-    background-image:
+    /*background-image:
     url(images/nav.png),
     url(images/body%20-%20Copy%20-%20Copy.png);
     background-repeat: no-repeat;
     background-position:
     top left 10px,
-    bottom left 10px;
+    bottom left 10px;*/
 }
 
+/* Nav transitions */
+
+.transition-nav{
+    margin-top: -12px;
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #f3eefe;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.6s;
+}
+
+nav:hover > .transition-nav{
+    cursor: default;
+    opacity: 1;
+}
+/* Nav transitions end */
+
 nav ul{
+    margin-top: 3px;
     list-style: none;
     background: linear-gradient(#F6F6F6 , #878787);
-    height: 40px;
 }
 
 li{
@@ -128,7 +178,6 @@ ul > li > ul >li{
     display: block;
     height: 40px;
     margin-left: 0;
-    padding-top: 10px;
     padding-left: 0;
     border-bottom: 2px solid #000;
 }
@@ -146,29 +195,75 @@ li li:hover{
 article.container{
     float: left;
     width: 560px;
+    height: 290px;
     margin-top: 15px;
-    padding-top: 50px;
-    padding-bottom: 70px;
     border-left: 5px solid #4895f8;
     border-right: 5px solid #4895f8;
     border-radius: 25px;
-    background-image: url(images/article.png),
+   /* background-image: url(images/article.png),
     url(images/article-close.png);
     background-repeat: no-repeat;
     background-position: top left 10px,
-    bottom left 10px;
+    bottom left 10px;*/
+    transition: height 0.7s ease-in-out 0.6s,
+    border-left-color 0.7s ease-in-out 0.7s,
+    border-right-color 0.7s ease-in-out 0.7s;
 }
 
-article.container:hover{
-    cursor: default;
+/* Article transitions */
+
+.transition-article{
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #4895f8;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.7s,
+    color 0.7s ease-in-out 0.7s;
 }
 
 article.container h2{
+    margin-top: -40px;
     padding-left: 15px;
     font-family: "Days One" , sans-serif;
     font-size: 36px;
     color: #94caff;
+    transition: margin-top 0.7s ease-in-out 0.6s,
+    color 0.7s ease-in-out 0.6s;
 }
+
+article.container:hover{
+    cursor: default;
+    height: 370px;
+    border-left-color: #ffa500;
+    border-right-color: #ffa500;
+}
+
+article.container:hover > h2{
+    margin-top: 15px;
+    color: #ffa500;
+}
+
+article.container:hover > .transition-article{
+    opacity: 1;
+    color: #E26823;
+}
+
+article.container > section{
+    width: 520px;
+    padding: 15px;
+    background-color: rgba(52, 57, 226, 0.3);
+    border-radius: 15px;
+    transition: background-color 0.7s ease-in-out 0.6s;
+}
+
+article.container:hover > section{
+    background-color: rgba(226, 104, 35, 0.30);
+}
+
+/* Article transitions end*/
 
 article.container > section > p{
     width: 480px;
@@ -184,50 +279,81 @@ article.container > section >p > span{
     text-indent: 30px;
 }
 
-article.container > section{
-    width: 520px;
-    padding: 15px;
-    background-color: rgba(52, 57, 226, 0.3);
-    border-radius: 15px;
-}
-
 aside{
     float: right;
     position: absolute;
     margin-left: 920px;
     width: 250px;
+    height: 380px;
     margin-top: 15px;
-    padding-top: 40px;
     padding-right: 15px;
     padding-left: 15px;
-    padding-bottom: 30px;
     border-left: 5px solid #ffa500;
     border-right: 5px solid #ffa500;
     border-radius: 25px;
-    background-image:
+    /*background-image:
     url(images/aside.png),
     url(images/aside-close.png);
     background-repeat: no-repeat;
     background-position:
     top left 10px,
-    bottom left 10px;
+    bottom left 10px;*/
+    transition: height 0.7s ease-in-out 0.6s,
+    border-left-color 0.7s ease-in-out 0.7s,
+    border-right-color 0.7s ease-in-out 0.7s;
 }
+
+/* Aside Transitions */
 
 aside:hover{
     cursor: default;
+    height: 465px;
+    border-left-color: #4895f8;
+    border-right-color: #4895f8;
+}
+
+.transition-aside{
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #4895f8;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.7s,
+    color 0.7s ease-in-out 0.7s;
+}
+
+aside:hover > .transition-aside{
+    opacity: 1;
 }
 
 aside > h2{
+    margin-top: -40px;
     font-family: "Days One" , sans-serif;
     font-size: 24px;
     text-align: center;
     color: #ffda1a;
+    transition: margin-top 0.7s ease-in-out 0.6s,
+    color 0.7s ease-in-out 0.6s;
+}
+
+aside:hover > h2{
+    margin-top: 15px;
+    color: #94caff;
 }
 
 aside > section{
     background-color: rgba(226, 104, 35, 0.30);
     border-radius: 15px;
+    transition: background-color 0.7s ease-in-out 0.6s;
 }
+
+aside:hover > section{
+    background-color: rgba(52, 57, 226, 0.3);
+}
+
+/* Aside Transitions end */
 
 aside > section > ul{
     list-style: none;
@@ -242,7 +368,7 @@ aside > section > ul > li{
 }
 
 aside > section > ul > li:hover{
-    background-color: #ffd129;
+    background-color: #94caff/*#ffd129*/;
 }
 
 aside > section > ul > li > a{
@@ -252,35 +378,70 @@ aside > section > ul > li > a{
 footer.container{
     clear: both;
     margin-top: 490px;
+    height: 100px;
     color: #ffffff;
     border-left: 5px solid #232bab;
-    border-right: 5px solid #8f4a09;
+    border-right: 5px solid #232bab;
     border-radius: 25px;
-    background-image:
+    /*background-image:
     url(images/footer.png),
     url(images/footer-close.png);
     background-repeat: no-repeat;
     background-position:
     top left 10px,
-    bottom left 10px;
+    bottom left 10px;*/
+    transition: height 0.7s ease-in-out 0.6s,
+    border-left-color 0.7s ease-in-out 0.7s,
+    border-right-color 0.7s ease-in-out 0.7s;
 }
+
+/* Footer Transitions */
 
 footer.container:hover{
     cursor: default;
+    height: 170px;
+    border-left-color: #7416c7;
+    border-right-color: #7416c7;
 }
 
-footer.container div{
+.transition-footer{
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #4895f8;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.7s,
+    color 0.7s ease-in-out 0.7s;
+}
+
+footer.container:hover > .transition-footer{
+    opacity: 1;
+    color: #7416c7;
+}
+
+footer.container section{
     width: 500px;
-    margin-top: 50px;
+    margin-top: -35px;
     padding: 15px;
     border-radius: 15px;
     background-color: rgba(44, 69, 255, 0.2);
+    transition: margin-top 0.7s ease-in-out 0.6s,
+    background-color 0.7s ease-in-out 0.6s;
 }
+
+footer.container:hover > section{
+    margin-top: 5px;
+    background-color: rgba(116, 22, 199, 0.2);
+}
+
+/* Footer Transitions end */
 
 footer.container > span{
     display: inline-block;
     float: right;
-    padding-bottom: 30px;
+    margin-top: -25px;
 }
 
 @media screen and (max-width: 1366px) {
@@ -302,18 +463,23 @@ footer.container > span{
         margin-top: 5px;
         border-left: 5px solid #7416c7;
         border-right: 5px solid #7416c7;
-        background-image:
+       /* background-image:
         url(images/header.png),
         url(images/header-close.png);
         background-repeat: no-repeat;
         background-position:
         top left 10px,
-        bottom left 10px;
+        bottom left 10px;*/
         border-radius: 25px;
     }
 
     article.container{
         width: 430px;
+        height: 330px;
+    }
+
+    article.container:hover{
+        height: 410px;
     }
 
     article.container > section > p{
@@ -344,7 +510,7 @@ footer.container > span{
     }
 
     header > h1{
-        margin-top: 50px;
+        margin-top: 15px;
         color: #ae24fe;
         font-family: "Days One" ,sans-serif;
         font-size: 26px;
@@ -358,6 +524,7 @@ footer.container > span{
     article.container{
         float: none;
         width: 512px;
+        height: 290px;
     }
 
     article.container > h2{
@@ -379,6 +546,7 @@ footer.container > span{
         float: none;
         position: static;
         width: 512px;
+        height: 350px;
         margin: 15px auto;
     }
 
@@ -393,11 +561,16 @@ footer.container > span{
         clear: none;
         margin-top: 15px;
         width: 512px;
+        height: 150px;
     }
 
-    footer.container div{
+    footer.container:hover{
+        height: 200px;
+    }
+
+    footer.container section{
         width: 470px;
-        margin-top: 50px;
+        margin-top: -30px;
         padding: 15px;
         border-radius: 15px;
         background-color: rgba(44, 69, 255, 0.2);
@@ -419,7 +592,7 @@ footer.container > span{
     }
 
     header > h1{
-        margin-top: 50px;
+        margin-top: 15px;
         color: #ae24fe;
         font-family: "Days One" ,sans-serif;
         font-size: 22px;
@@ -473,6 +646,11 @@ footer.container > span{
     article.container{
         float: none;
         width: 400px;
+        height: 350px;
+    }
+
+    article.container:hover{
+        height: 435px;
     }
 
     article.container > h2{
@@ -494,6 +672,11 @@ footer.container > span{
         float: none;
         position: static;
         width: 400px;
+        height: 280px;
+    }
+
+    aside:hover{
+        height: 375px;
     }
 
     aside h2{
@@ -513,9 +696,9 @@ footer.container > span{
         width: 400px;
     }
 
-    footer.container div{
+    footer.container section{
         width: 100%;
-        margin-top: 50px;
+        margin-top: -30px;
         padding: 15px;
         border-radius: 15px;
         background-color: rgba(44, 69, 255, 0.2);

@@ -77,6 +77,37 @@
 }
 /*accordian end here*/
 
+/* tooltip style starts here */
+#lotr-span, #dune-span, #homes-span, #heroes-span, #wow-span, #diablo-span{
+    text-decoration: none;
+    outline: none;
+}
+
+.tool-tip{
+    position: absolute;
+    display: inline-block;
+    max-width: 150px;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 3px;
+    border-top-left-radius: 1px;
+    background:linear-gradient(#ffad20, #ffae32);
+    color: #000000;
+    box-shadow: 3px 3px 2px #251406;
+}
+
+.pointer-class{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left:-20px;
+    border: solid 10px;
+    border-color: transparent #ffb32f transparent transparent;
+}
+
 body{
     background-image: url(images/bodybg1.2.jpg);
 }
@@ -86,43 +117,91 @@ header{
     margin-top: 5px;
     border-left: 5px solid #7416c7;
     border-right: 5px solid #7416c7;
-    background-image:
+   /* background-image:
     url(images/header.png),
     url(images/header-close.png);
     background-repeat: no-repeat;
     background-position:
     top left 10px,
-    bottom left 10px;
+    bottom left 10px;*/
     border-radius: 25px;
+    transition:
+    height 0.7s ease-in-out 0.6s,
+    border-left-color 0.7s ease-in-out 0.6s,
+    border-right-color 0.7s ease-in-out 0.6s;
+}
+
+header:hover{
+    cursor: default;
+    height: 175px;
+    border-left-color: #ffa500;
+    border-right-color: #ffa500;
 }
 
 header > h1{
-    margin-top: 50px;
+    margin-top: 10px;
     color: #ae24fe;
     font-family: "Days One" ,sans-serif;
     text-align: center;
+    transition:
+    margin-top 0.7s ease-in-out 0.6s,
+    color 0.7s ease-in-out 0.6s;
 }
 
-header > h1:hover{
-    cursor: default;
+header:hover > h1{
+    margin-top: 0;
+    color: #ffa500;
+}
+
+.transition-header{
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #ae24fe;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.6s,
+    color 0.7s ease-in-out 0.6s;
+}
+
+header:hover > .transition-header{
+    opacity: 1;
+    color: orange;
 }
 
 nav{
     margin-top: 15px;
-    padding-top: 50px;
-    padding-bottom: 40px;
+    height: 105px;
     border-left:5px solid #ffffff;
     border-right:5px solid #ffffff;
     border-radius: 25px;
     font-family: sans-serif;
     font-weight: 400;
-    background-image:
-    url(images/nav.png),
-    url(images/body%20-%20Copy%20-%20Copy.png);
-    background-repeat: no-repeat;
-    background-position:
-    top left 10px,
-    bottom left 10px;
+    /* background-image:
+     url(images/nav.png),
+     url(images/body%20-%20Copy%20-%20Copy.png);
+     background-repeat: no-repeat;
+     background-position:
+     top left 10px,
+     bottom left 10px;*/
+}
+
+.transition-nav{
+    margin-top: -12px;
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #f3eefe;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.6s;
+}
+
+nav:hover > .transition-nav{
+    cursor: default;
+    opacity: 1;
 }
 
 nav ul{
@@ -212,24 +291,49 @@ nav li li:hover{
 }
 
 article.container{
+    height: 100%;
     margin-top: 15px;
-    padding-top: 50px;
-    padding-bottom: 70px;
     border-left: 5px solid #4895f8;
-    border-right: 5px solid #f8c139;
+    border-right: 5px solid #4895f8;
     border-radius: 25px;
-    background-image: url(images/article.png),
+    /*background-image:
+    url(images/article.png),
     url(images/article-close.png);
     background-repeat: no-repeat;
     background-position: top left 10px,
-    bottom left 10px;
+    bottom left 10px;*/
+}
+
+article.container:hover{
+    cursor: default;
 }
 
 article.container > h2{
+    margin-top: -35px;
     padding-left: 15px;
     font-family: "Days One" , sans-serif;
     font-size: 36px;
     color: #94caff;
+    transition: margin-top 0.7s ease-in-out 0.7s;
+}
+
+article.container:hover > h2{
+    margin-top: 20px;
+}
+
+.transition-article{
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #4895f8;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.7s;
+}
+
+article.container:hover > .transition-article{
+    opacity: 1;
 }
 
 article.container > section  p{
@@ -256,7 +360,6 @@ article.container > section > span > a{
 }
 
 article.container > section{
-
     padding: 15px;
    /* background-color: rgba(38, 165, 255, 0.70); */
     background-color: transparent;
@@ -266,39 +369,68 @@ article.container > section{
 footer.container{
     margin-top: 15px;
     margin-bottom: 15px;
+    height: 100px;
     color: #ffffff;
     border-left: 5px solid #232bab;
     border-right: 5px solid #232bab;
     border-radius: 25px;
-    background-image:
+   /* background-image:
     url(images/footer.png),
     url(images/footer-close.png);
     background-repeat: no-repeat;
     background-position:
     top left 10px,
-    bottom left 10px;
+    bottom left 10px;*/
+    transition: height 0.7s ease-in-out 0.6s,
+    border-left-color 0.7s ease-in-out 0.7s,
+    border-right-color 0.7s ease-in-out 0.7s;
 }
 
 footer.container:hover{
     cursor: default;
+    height: 170px;
+    border-left-color: #7416c7;
+    border-right-color: #7416c7;
 }
 
-footer.container div{
+.transition-footer{
+    display: inline-block;
+    font-family: "Days One" , sans-serif;
+    font-style: italic;
+    color: #4895f8;
+    font-size: 30px;
+    opacity: 0;
+    transition:
+    opacity 0.7s ease-in-out 0.7s,
+    color 0.7s ease-in-out 0.7s;
+}
+
+footer.container:hover > .transition-footer{
+    opacity: 1;
+    color: #7416c7;
+}
+
+footer.container section{
+    margin-top: -35px;
     width: 500px;
-    margin-top: 50px;
     padding: 15px;
     border-radius: 15px;
     background-color: rgba(44, 69, 255, 0.2);
+    transition: margin-top 0.7s ease-in-out 0.7s,
+    background-color 0.7s ease-in-out 0.6s;
+}
+
+footer.container:hover > section{
+    margin-top: 5px;
+    background-color: rgba(116, 22, 199, 0.2);
 }
 
 footer.container > span{
     display: inline-block;
     float: right;
-    margin-top: 10px;
-    padding-bottom: 30px;
+    margin-top: -25px;
 }
 
-/* Gallery */
 
 @media screen and (max-width: 640px){
 
@@ -344,7 +476,7 @@ footer.container > span{
         border-bottom: 2px solid #000;
     }
 
-    footer.container div{
+    footer.container section{
         width: 100%;
     }
 }
